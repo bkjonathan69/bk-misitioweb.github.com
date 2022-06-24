@@ -1,0 +1,30 @@
+*{
+}
+div{
+  padding: 100px;
+  margin: 200px;
+  background-color: #FEFFFD;
+  
+}
+h1{ /* Le damos estilo al titulo principal */
+  color: blue; /*Definimos el color*/
+  font-family: serif; /*Definimos el tipo de letra*/
+  font-size: 50px; /*Difinimos el tamaño de letra*/
+  text-align: center; /*Definimos hacia que lado se alinea el texto*/
+}
+h2{
+  color: darkred; /*Definimos el color*/
+  font-family: Arial;  /*Definimos el tipo de letra*/
+  font-size: 17px;  /*Difinimos el tamaño de letra*/
+  text-align: center;  /*Definimos hacia que lado se alinea el texto*/
+}
+p{
+  color: black; /*Definimos el color*/
+  font-family: TIMES NEW ROMAN;  /*Definimos el tipo de letra*/
+  font-size: 15px;  /*Difinimos el tamaño de letra*/
+  text-align: auto;  /*Definimos hacia que lado se alinea el texto*/
+}
+body{
+  
+  background-color: #42B57F ;
+}

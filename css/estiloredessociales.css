@@ -1,0 +1,12 @@
+body{
+	background: #D3CBC6;  /*Color de fondo*/
+}
+footer{
+	text-align: center;  /*Alineacion del texto*/
+	font-family: Times New Roman;  /*Tipo de letra*/
+	font-size: 24px;  /*Tamaño de letra*/
+} 
+img{
+	width: 50px;  /*Anchura de la imagen*/
+	height: 50px;   /*Largo de la imagen*/
+}

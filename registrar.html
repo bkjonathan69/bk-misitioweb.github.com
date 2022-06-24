@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="utf-8" />
+	<title>Registrar</title>
+    <link rel="stylesheet" href="css/estiloreg.css">
+ </head>
+ <body style="background-image: url(img/imagen5.jpg);"><h1 class="titulo">FORMULARIO DE REGISTRO</h1>
+ 	<form action="guardar.php" method="post" class="form-register" name="validacion-frm" id="validacion-frm" >
+ 		<h1 class="subtitulo">CREA UNA CUENTA</h1>
+ 		<div class="singup">
+ 			
+ 			<div class="signup-main" >
+ 				<input type="text" id="nombre" name="nombre" placeholder="Nombre" class="imput-48">
+ 				<input type="text" id="apellidos" name="apellido" placeholder="Apellido" class="imput-48">
+ 				<br>
+ 				<br>
+ 				<input type="email" id="email" name="email" placeholder="Correo electronico" class="imput-48" size="45" >
+ 				<br>
+ 				<br>
+ 				<input type="text" id="usuario" name="usuario" placeholder="Nombre de usuario ej. @jonha74" class="imput-48" style="float:left">
+ 				<input type="password" id="contraseña" name="contraseña" placeholder="Contraseña ej. Jo51*wB7" class="imput-48">
+ 				<br>
+ 				<br>
+ 				<input type="text" id="telefono" name="telefono" placeholder="Telefono ej. 554-569-9156" class="imput-48">
+ 				<input type="text" id="asunto" name="asunto" placeholder="Asunto" class="imput-48">
+ 				<br></b>
+ 				<br>
+ 				<textarea type="text" id="comentarios" cols="25" rows="5" class="comentarios" placeholder="Comentarios" name="comentario"></textarea>
+ 				<br>
+ 				<!--Acepto terminos y condiciones-->
+ 				<p>
+ 					<span><a link href="terminosycondiciones.html" id="terminos" >Acepto Terminos y Condiciones.</a></span>
+ 					<input type="checkbox" name="acepto_chk" value="1" id="acepto_chk" />
+ 				</p>
+ 				<button type="submit"  class="imput-48" id="btn-Registrar" >Registrar</button>
+ 				<p class="form-link">¿Ya tienes cuenta? <a link href="login.html" rel="import">Ingresa aqui</a></p>
+ 			</div>
+ 		</body>
+
+ 		<script type="text/javascript">
+       function validarForm(){
+        var expRegNombre=/^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/;          
+        var expRegApellidos=/^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/;
+        var expRegCorreo=/^\w+@(\w+\.)+\w{2,4}$/;
+        var expRegUsuario=/(^|[^@\w])@(\w{1,15})\b/;
+        var expRegClave= /(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=|:;"'<>,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,8}/;
+        var expRegTelefono=/^(\()?\d{3}(\()?(-|\s)?\d{3}(-|\s)\d{4}$/;
+        
+       
+        var nombre = document.getElementById('nombre');
+        var apellidos = document.getElementById('apellidos');
+        var correo = document.getElementById('email');
+        var usuario = document.getElementById('usuario');
+        var clave = document.getElementById('contraseña');
+        var telefono = document.getElementById('telefono');
+        var asunto = document.getElementById('asunto');
+        var comentarios = document.getElementById('comentarios');
+
+         if (nombre.value === "") {
+            alert("El campo nombre es requerido");
+            nombre.focus();
+            return false;
+        }
+
+        if (!expRegNombre.exec(nombre.value)) {
+            alert("El campo nombre solo admite letras y espacios.");
+            nombre.focus();
+            return false;
+        }
+
+        if (apellidos.value === "") {
+            alert("El campo apellidos es requerido.");
+            apellidos.focus();
+            return false;
+        }
+        if (!expRegApellidos.exec(apellidos.value)) {
+            alert("El campo apellido solo admite letras y espacios.");
+            apellidos.focus();
+            return false;
+        }
+         if (correo.value === "") {
+            alert("El campo correo es requerido.");
+            correo.focus();
+            return false;
+        }
+        if (!expRegCorreo.exec(correo.value)) {
+            alert("El campo correo no tiene la estructura adecuada");
+            correo.focus();
+            return false;
+        }
+        if (usuario.value === "") {
+            alert("El campo usuario es requerido.");
+            usuario.focus();
+            return false;
+        }
+        if (!expRegUsuario.exec(usuario.value)) {
+            alert("El campo usuario no tiene el formato correcto.");
+            usuario.focus();
+            return false;
+        }
+        if (clave.value === "") {
+            alert("El campo contraseña es requerido.");
+            clave.focus();
+            return false;
+        }
+        if (!expRegClave.exec(clave.value)) {
+            alert("El campo contraseña no tiene el formato correcto.");
+            clave.focus();
+            return false;
+        }
+        if (telefono.value === "") {
+            alert("El campo telefono es requerido.");
+            telefono.focus();
+            return false;
+        }
+        if (!expRegTelefono.exec(telefono.value)) {
+            alert("El campo telefono no tiene el formato correcto.");
+            telefono.focus();
+            return false;
+        }
+        if (asunto.value === "") {
+            alert("El campo asunto es requerido.");
+            asunto.focus();
+            return false;
+        }
+       if (comentarios.value === "") {
+            alert("El campo comentarios es requerido.");
+            comentarios.focus();
+            return false;
+        }
+        if (document.getElementById("acepto_chk").checked==false) {
+         alert("Para continuar, acepta los terminos y condiciones");
+         document.getElementById("acepto_chk").focus();
+         return false;
+       }
+        return true;
+        }
+        window.onload = function()
+        {
+          var formulario=document.getElementById("validacion-frm");
+          formulario.onsubmit = validarForm;
+        }
+  </script>
+</html

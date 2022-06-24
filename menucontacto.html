@@ -1,0 +1,135 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario de contacto</title>
+
+<link rel="stylesheet" href="css/estiloformulariocontacto.css">   <!--Ligar a la hoja de estilos-->
+
+  </head>
+
+<body>  
+
+  <div class="contact_form">
+
+    <div class="formulario">      
+      <h1>Formulario de contacto</h1>    <!--Titulo del formulario-->
+        <h3>Escríbenos y en breve nos pondremos en contacto contigo.</h3>   <!--Es una breve descripcion que aparece abajo del titulo-->
+
+         <!--FORMULARIO-->
+          <form action="enviar.php" method="post" id="validacion-form">       
+
+            
+                <p>
+                  <label for="nombre" class="colocar_nombre">Nombre:</label>  <!--Etiqueta Nombre-->
+                    <input type="text" id="nombre"  placeholder="Escribe tu nombre" name="nombre"> <!--Caja de texto para escribir el nombre-->
+                </p>
+              
+                <p>
+                  <label for="email" class="colocar_email">Email:</label>   <!--Etiqueta Email-->
+                    <input type="email"  id="email"  placeholder="Escribe tu Email" name="email">  <!--Caja de texto para escribir el email-->
+                </p>
+            
+                <p>
+                  <label for="telefone" class="colocar_telefono">Teléfono:</label>   <!--Etiqueta Telefono-->
+                    <input type="tel"  id="telefono" placeholder="Escribe tu teléfono" name="telefono"> <!--Caja de texto para escribir el telefono-->
+                </p>    
+              
+                <p>
+                  <label for="website" class="colocar_website">Sitio web:</label>   <!--Etiqueta Sitio Web-->
+                    <input type="url" name="website" id="website" placeholder="Escribe la URL de tu web">  <!--Caja de texto para escribir la direccion del sitio web-->
+                </p>    
+              
+                <p>
+                  <label for="asunto" class="colocar_asunto">Asunto:</label>   <!--Etiqueta Asunto-->
+                    <input type="text" name="asunto" id="asunto"  placeholder="Escribe un asunto">  <!--Caja de texto para escribir el asunto-->
+                </p>    
+              
+                <p>
+                  <label for="mensaje" class="colocar_mensaje">Mensaje:</label>    <!--Etiqueta Mensaje-->
+                                       
+                                    <textarea name="mensaje" class="texto_mensaje" id="mensaje"  placeholder="Escribe aquí tu comentario..."></textarea> <!--Caja de texto para escribir el comentario-->
+                                </p>                    
+              
+                <button type="submit" name="enviar_formulario" id="enviar"><p>Enviar</p></button>  <!--Boton Enviar-->
+
+          </form>   <!--Se cierra el Formulario-->
+    </div>  
+  </div>
+
+</body>
+<script type="text/javascript">
+  /*VALIDACION DEL FORMULARIO CONTACTO*/
+       function validarForm(){
+        var expRegNombre=/^[ a-zA-ZñÑáéíóúÁÉÍÓÚ]+$/;     /*Expresion regular para validar el nombre*/
+        var expRegCorreo=/^\w+@(\w+\.)+\w{2,4}$/;        /*Expresion regular para validar el correo*/
+        var expRegTelefono=/^(\()?\d{3}(\()?(-|\s)?\d{3}(-|\s)\d{4}$/;/*Expresion regular para validar el telefono*/
+        
+       
+
+        var nombre = document.getElementById('nombre');   /*variable nombre*/
+        var correo = document.getElementById('email');    /*variable correo*/
+        var telefono = document.getElementById('telefono');    /*variable telefono*/
+        var sitioweb = document.getElementById('website');    /*variable sitioweb*/
+        var asunto = document.getElementById('asunto');       /*variable asunto*/
+        var mensaje = document.getElementById('mensaje');     /*variable mensaje*/
+
+        if (nombre.value === "") {
+            alert("El campo nombre es requerido");   /*Se mostrara en caso de no haber completado el campo*/
+            nombre.focus();
+            return false;
+        }
+
+        if (!expRegNombre.exec(nombre.value)) {
+            alert("El campo nombre solo admite letras y espacios."); /*Se mostrara en caso de no  haber escrito con el formato correcto*/
+            nombre.focus();
+            return false;
+        }
+        if (correo.value === "") {
+            alert("El campo correo es requerido");  /*Se mostrara en caso de no haber completado el campo*/
+            correo.focus();
+            return false;
+        }
+
+        if (!expRegCorreo.exec(correo.value)) {
+            alert("El campo correo no tiene el formato correcto."); /*Se mostrara en caso de no  haber escrito con el formato correcto*/
+            correo.focus();
+            return false;
+        }
+        if (telefono.value === "") {
+            alert("El campo telefono es requerido.");  /*Se mostrara en caso de no haber completado el campo*/
+            telefono.focus();
+            return false;
+        }
+        if (!expRegTelefono.exec(telefono.value)) {
+            alert("El campo telefono no tiene el formato correcto."); /*Se mostrara en caso de no  haber escrito con el formato correcto*/
+            telefono.focus();
+            return false;
+        }
+         if (sitioweb.value === "") {
+            alert("El campo sitioweb es requerido");   /*Se mostrara en caso de no haber completado el campo*/
+            sitioweb.focus();
+            return false;
+        }
+          if (asunto.value === "") {
+            alert("El campo asunto es requerido");  /*Se mostrara en caso de no haber completado el campo*/
+            asunto.focus();
+            return false;
+        }
+        if (mensaje.value === "") {
+            alert("El campo mensaje es requerido");  /*Se mostrara en caso de no haber completado el campo*/
+            mensaje.focus();
+            return false;
+        }
+       
+       
+        return true;
+        }
+        window.onload = function()
+        {
+          var formulario=document.getElementById("validacion-form");  /*Funcion BOTON ENVIAR*/
+          formulario.onsubmit = validarForm;
+        }
+      </script>
+</html>
+
+

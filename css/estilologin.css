@@ -1,0 +1,147 @@
+*{box-sizing:border-box;}
+
+    h1{
+        color: white;  /*Color de texto del titulo*/
+    }
+body{
+    font-family: "HelveticaNeue-Light","Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif; /*Tipo de letra*/
+  color:white;  /*Color de letra*/
+  font-size:12px;  /*Tamaño de letra*/
+  background:#333 url(/images/classy_fabric.png);  /*Fondo del cuerpo de la pagina*/
+}
+form{
+   background:#111; /*Fondo del formulario*/
+  width:360px;   /*Ancho del formulario*/
+  margin:30px auto;  /*Margen del formulario*/
+  border-radius:0.4em;  /*Radio deel borde*/
+  border:1px solid #191919;   /*Borde*/
+  overflow:hidden; /*Mostrar cuando el contenido se desborda de los extremos superior e inferior*/
+  position:relative;  /*Posicion del formulario*/
+  box-shadow: 0 5px 10px 5px rgba(0,0,0,0.2);  /*Efectos de sombra*/
+}
+form:after {
+  content:""; /*Generar nuevo contenido de forma dinámica e insertarlo*/
+  display:block; /*Definir como será mostrado un cierto elemento*/
+  position:absolute;  /*Posicion*/
+  height:1px;  /*largo del formulario*/
+  width:100px;   /*Ancho del formulario*/
+  left:20%; /*Especifica parte de la posición de un elemento*/
+  background:linear-gradient(left, #111, #444, #b6b6b8, #444, #111);   /*Fondo*/
+  top:0; /*Indica el desplazamiento entre el borde superior del elemento y la parte superior de su elemento contenedor*/
+}
+
+form:before {
+    content:""; /*Indica el desplazamiento entre el borde superior del elemento y la parte superior de su elemento contenedor*/
+  display:block;  /*Definir como será mostrado un cierto elemento*/
+  position:absolute; /*Posicion*/
+  width:8px;/*Ancho del formulario*/
+  height:5px; /*largo del formulario*/
+  border-radius:50%;  /*Radio deel borde*/
+  left:34%; /*Especifica parte de la posición de un elemento*/
+  top:-7px;  /*Indica el desplazamiento entre el borde superior del elemento y la parte superior de su elemento contenedor*/
+  box-shadow: 0 0 6px 4px #fff;  /*Efectos de sombra*/
+}
+
+.inset {
+    padding:20px; /*El espacio entre su contenido y su borde*/
+  border-top:1px solid #19191a; /*Establecer de forma abreviada el valor*/
+}
+
+form h1 {
+  font-size:30px; /*Tamaño de letra*/
+  text-shadow:0 1px 0 black; /*Agrega sombra al texto*/
+  text-align:center; /*Alineacion del texto*/
+  padding:15px 0; /*El espacio entre su contenido y su borde*/
+  border-bottom:1px solid rgba(0,0,0,1); /*Borde del boton*/
+  position:relative; /*Posicion*/
+}
+
+form h1:after {
+    content:""; /*Indica el desplazamiento entre el borde superior del elemento y la parte superior de su elemento contenedor*/
+  display:block; /*Definir como será mostrado un cierto elemento*/
+  width:250px; /*Ancho*/
+  height:100px; /*largo*/
+  position:absolute; /*Posicion*/
+  top:0;   /*Indica el desplazamiento entre el borde superior del elemento y la parte superior de su elemento contenedor*/
+  left:50px; /*Especifica parte de la posición de un elemento*/
+  pointer-events:none; /*Si un elemento reacciona o no a eventos de puntero.*/
+  transform:rotate(70deg); /*Transformacion*/
+  background:linear-gradient(50deg, rgba(255,255,255,0.15), rgba(0,0,0,0)); /*Fondo*/
+  
+}
+
+label {
+    color:#666; /*Color de las label*/
+  display:block; /*Definir como será mostrado un cierto elemento*/
+  padding-bottom:9px; /*Establece la anchura del boton*/
+}
+
+input[type=text],
+input[type=password] {
+    width:100%;  /*Ancho*/
+  padding:8px 5px;  /*El espacio entre su contenido y su borde*/
+  background:linear-gradient(#1f2124, #27292c); /*Fondo*/
+  border:1px solid #222; /*Borde*/
+  box-shadow: 0 1px 0 rgba(255,255,255,0.1);  /*Efectos de sombra*/
+  border-radius:0.3em; /*Radio del borde*/
+  margin-bottom:20px; /*Margen del boton*/
+}
+
+label[for=remember]{
+    color:white;  /*Color*/
+  display:inline-block; /*Definir como será mostrado un cierto elemento*/
+  padding-bottom:0; /*Establece la anchura del boton*/
+  padding-top:5px; /*Establece la anchura de la zona de relleno superior de un elemento*/
+}
+
+input[type=checkbox] {
+    display:inline-block; /*Definir como será mostrado un cierto elemento*/
+  vertical-align:top; /*Alineacion vertical*/
+}
+
+.p-container {
+    padding:0 20px 20px 20px; /*El espacio entre su contenido y su borde*/
+}
+
+.p-container:after {
+    clear:both; /*Especifica si un elemento puede estar al lado de elementos flotantes que lo preceden o si debe ser movido*/
+  display:table; /*Definir como será mostrado un cierto elemento*/
+  content:""; /*Indica el desplazamiento entre el borde superior del elemento y la parte superior de su elemento contenedor*/
+}
+
+.p-container span a{
+  display:block; /*Definir como será mostrado un cierto elemento*/
+  float:left;  /*Posicion*/
+  color:#0E3CB4; /*Color del enlace*/
+  padding-top:8px;  /*Establece la anchura de la zona de relleno superior de un elemento*/
+  font-size: 15px; /*Tamaño de la palabra enlace*/
+}
+
+input[type=submit] {
+    padding:5px 20px; /*El espacio entre su contenido y su borde*/
+  border:1px solid rgba(0,0,0,0.4); /*Borde*/
+  text-shadow:0 -1px 0 rgba(0,0,0,0.4); /*Efectos de sombra*/
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.3), /*Efectos de sombra*/
+    inset 0 10px 10px rgba(255,255,255,0.1);  /*Efectos de sombra*/
+  border-radius:0.3em;  /*Borde de radio*/
+  background:#0184ff;  /*Fondo*/
+  color:white; /*Color*/
+  float:right; /*Posicion*/
+  font-weight:times new roman;  /*Tipo de letra de la palabra enlace*/
+  cursor:pointer; /*Cursor*/
+  font-size:17px; /*Tamaño de letra del enlace*/
+}
+
+input[type=submit]:hover {
+  box-shadow:    /*Efectos de sombra*/
+    inset 0 1px 0 rgba(255,255,255,0.3),  /*Efectos de sombra*/
+    inset 0 -10px 10px rgba(255,255,255,0.1);   /*Efectos de sombra*/
+}
+
+input[type=text]:hover,
+input[type=password]:hover,
+label:hover ~ input[type=text],
+label:hover ~ input[type=password] {
+    background:#27292c;  /*Fondo*/
+}

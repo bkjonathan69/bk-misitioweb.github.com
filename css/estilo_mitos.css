@@ -1,0 +1,72 @@
+*{
+}
+div{
+  padding: 100px;
+  margin: 200px;
+  background-color: #FEFFFD;
+}
+h1 { /* Le damos estilo al titulo principal */
+  color: #283747 ; /*Definimos el color*/
+  font-family: serif; /*Definimos el tipo de letra*/
+  font-size: 50px; /*Difinimos el tamaño de letra*/
+  text-align: center; /*Definimos hacia que lado se alinea el texto*/
+}
+h2 {
+  color: #515A5A ; /*Definimos el color*/
+  font-family: cursive;  /*Definimos el tipo de letra*/
+  font-size: 23px;  /*Difinimos el tamaño de letra*/ 
+  text-align: auto;  /*Definimos hacia que lado se alinea el texto*/
+}
+p {
+  color: black; /*Definimos el color*/
+  font-family: all;  /*Definimos el tipo de letra*/
+  font-size: 20px;  /*Difinimos el tamaño de letra*/
+  text-align: auto;  /*Definimos hacia que lado se alinea el texto*/
+}
+body {
+  width:1200px;
+  height: 600px;
+  padding:100px;
+  margin:-30px;
+  font-size: 15px; /*Difinimos el tamaño de letra*/
+  text-align: auto;
+  border-radius: 15px;
+  background-color: #999C9C;
+}
+p.centrado1 {
+  text-align: center;
+}
+.imagen1 {
+  width:200px;
+  height: 250px;
+  padding: 3px;
+  border: black 2px solid;
+}
+p.centrado2 {
+  text-align: center;
+}
+.imagen2 {
+  width:220px;
+  height: 180px;
+  padding: 3px;
+  border: black 2px solid;
+}
+p.centrado3 {
+  text-align: center;
+}
+.imagen3 {
+  width:220px;
+  height: 180px;
+  padding: 3px;
+  border: black 2px solid;
+}
+p.centrado4 {
+  text-align: center;
+}
+.imagen4 {
+  width:200px;
+  height: 250px;
+  padding: 3px;
+  border: black 2px solid;
+}
+}

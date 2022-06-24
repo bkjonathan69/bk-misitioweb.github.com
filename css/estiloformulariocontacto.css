@@ -1,0 +1,121 @@
+
+body{
+  height: 100%; /*Largo*/
+  font-family: italic; /*Tipo de letra*/
+  background-color: #88888A; /*Color de fondo*/
+}
+
+
+.contact_form{  
+  width: 460px;  /*Ancho*/
+  height: auto; /*Largo*/
+  margin: 80px auto; /*Margen*/
+  border-radius: 10px;  /*Tamaño del radio del borde*/
+  padding-top: 30px;  /*Establece el relleno superior*/
+  padding-bottom: 20px;  /*El espacio entre el boton y su borde*/
+  background-color: #fbfbfb;  /*Color de fondo*/
+  padding-left: 30px; /*Establece el relleno izquierdo*/
+}
+
+
+input{
+  background-color: #fbfbfb;  /*Color de fondo*/
+  width: 408px;  /*Ancho*/
+  height: 40px; /*Largo*/
+  border-radius: 5px;  /*Tamaño del radio del borde*/
+  border-style: solid; /*Estilo del borde*/
+  border-width: 1px; /*Anchura del borde*/
+  border-color: #0A0ADE; /*Color de borde*/
+  margin-top: 10px;  /*Margen*/
+  padding-left: 10px; /*Establece el relleno izquierdo*/
+  margin-bottom: 20px; /*Margen del boton*/
+}
+
+
+textarea{
+  background-color: #fbfbfb; /*Color de fondo*/
+  width: 405px;  /*Ancho*/
+  height: 150px; /*Largo*/
+  border-radius: 5px;  /*Tamaño del radio del borde*/
+  border-style: solid;  /*Estilo del borde*/
+  border-width: 1px; /*Anchura del borde*/
+  border-color: #0A0ADE;  /*Color del borde*/
+  margin-top: 10px;   /*Establece el margen para los cuatro lados. */
+  padding-left: 10px; /*Establece el relleno izquierdo*/
+  margin-bottom: 20px; /*Margen del boton*/
+  padding-top: 15px; /*Establece el relleno superior*/
+}
+
+
+label{
+  display: block; /*Permite definir como será mostrado el elemento*/
+  float: center;  /*Posicion*/
+   font: italic; /*Tipo de letra*/
+}
+
+
+button{
+  height: 40px; /*Largo*/
+  padding-left: 5px; /*Establece el relleno izquierdo*/
+  padding-right: 5px;    /*Establece el relleno derecho*/
+  margin-bottom: 20px; /*Margen del boton*/
+  margin-top: 10px;   /*Establece el margen para los cuatro lados. */
+  text-transform: uppercase; /*Cambio entre mayúsculas y minúsculas del texto*/
+  background-color: #CEECF5; /*Color de fondo del botón*/
+  border-color: #CEECF5; /*Color del borde*/
+  border-style: solid;  /*Estilo del borde*/
+  border-radius: 10px;  /*Tamaño del radio del borde*/
+  width: 420px;   /*Ancho*/
+  cursor: pointer; /*Cursor*/
+   font: italic; /*Tipo de letra*/
+}
+
+
+button p{
+  color: #0101DF; /*Color de letra*/
+}
+
+
+h1{
+  font-size: 39px;  /*Tamaño de letra*/
+  text-align: center;  /*Alineacion del texto*/
+  padding-bottom: 20px; /*El espacio entre el boton y su borde*/
+  color: #0A0ADE;/*Color de letra*/
+}
+
+
+h3{
+  font-size: 16px; /*Tamaño de letra*/
+  padding-bottom: 30px;  /*El espacio entre el boton y su borde*/
+  color: #0e0e0e;   /*Color de letra*/
+  font-family: arial; /*Tipo de letra*/
+}
+
+
+p{
+  font-size: 14px;   /*Tamaño de letra*/
+  color: #0e0e0e; /*Color de letra*/
+}
+
+
+::-webkit-input-placeholder {
+ color: #a8a8a8; /*Color de letra*/
+}
+
+
+::-webkit-textarea-placeholder {
+ color: #a8a8a8; /*Color de letra*/
+}
+
+
+.formulario input:focus{
+  outline:0;  /*Propiedades individuales de contorno*/
+  border: 1px solid #97d848; /*Borde*/
+}
+
+
+.formulario textarea:focus{
+  outline:0; /*Propiedades individuales de contorno*/
+  border: 1px solid #97d848;  /*Borde*/
+}
+

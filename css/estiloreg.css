@@ -1,0 +1,37 @@
+
+
+body{
+text-align: center;   /*Posicion del texto*/
+background-image: url(img/imagen5.jpg); /*Imagen de fondo del body*/
+background-size: 1500px;  /*Tamaño de imagen en el body*/
+}
+.titulo{
+  color: #11F3DB;  /*Color del titulo principal*/
+}
+.subtitulo {
+  color: black;  /*Color del titulo del formulario*/
+}
+form{
+  position: relative;  /*Posicion del formulario*/
+  z-index: 1;  /*Orden de un elemento posicionado y sus descendientes.*/
+  background: #EEE0DE;   /*Color de fondo del formulario*/
+  max-width: 360px;  /*Establece el maximo de ancho*/
+  margin: 0 auto 100px;  /*Margen*/
+  padding: 30px;   /*El espacio entre su contenido y su borde*/
+  text-align: center;   /*Posicion del texto en el formulario*/
+  box-shadow: 0 0 20px 0 rgba(9, 184, 249, 0.2), 0 5px 5px 0 rgba(9, 184, 249, 0.24); /*Efectos de sombra*/
+}
+ button{
+  font-family: Roboto, sans-serif;  /*Tipo de letra en el boton*/
+  text-transform: uppercase;  /*Cambio entre mayúsculas y minúsculas*/
+  outline: 0;  /*Contorno*/
+  background: #03FDAA;  /*Color de fondo del boton*/
+  width: 100%; /*Establece el ancho*/
+  border: 0;   /*Borde del boton*/
+  padding: 15px;   /*El espacio entre su contenido y su borde*/
+  color: black;   /*Color de letra*/
+  font-size: 14px;  /*Tamaño de letra*/
+  -webkit-transition: all 0.3 ease; /*Transicion*/
+  transition: all 0.3 ease;  /*Transicion*/
+  cursor: pointer;  /*Cursor*/
+}

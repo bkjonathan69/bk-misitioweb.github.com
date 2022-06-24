@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="css/estilologin.css">  <!--Ligar a la hoja de estilos-->
+</head>
+<body><!--Pertenece a todo el cuerpo de la pagina y fondo de pagina-->
+
+    <!--Comenzamos a crear el formulario-->
+<form action="inicio.php" method="post" name="form-ingresar" id="form-ingresar">
+  <h1>Inicio de Seciòn</h1>  <!--Titulo principal-->
+  <div class="inset">
+  <p>
+    <label for="text">USUARIO</label> <!--Texto-->
+    <input type="text" name="usuario" id="usuario"> <!--Caja de texto para USUARIO-->
+  </p>
+  <p>
+    <label for="password">PASSWORD</label>  <!--Texto-->
+    <input type="password" name="contraseña" id="contraseña">  <!--Caja de texto para CONTRASEÑA-->
+  </p>
+  
+  </div>
+  <p class="p-container">
+    <span><a href="registrar.html">Crear cuenta</a></span>   <!--Direccionar a la pagina registrar--> 
+    <input type="submit" name="go" id="go" value="Iniciar Seciòn">   <!--Boton INICIAR SECION-->
+  </p>
+</form>
+</body>
+<script type="text/javascript">
+    /*VALIDACION DEL FORMULARIO*/
+       function validarForm(){
+        
+        var expRegUsuario=/(^|[^@\w])@(\w{1,15})\b/; /*Expresion regular para escribir el usuario*/
+        var expRegClave= /(?=(.*[0-9]))(?=.*[\!@#$%^&*()\\[\]{}\-_+=|:;"'<>,./?])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,8}/;  /*Expresion regular para escribir la contraseña del usuario*/
+       
+      
+        var usuario = document.getElementById('usuario'); /*Variable usuario*/
+        var clave = document.getElementById('contraseña'); /*variable clave*/
+
+    if (usuario.value === "") {
+            alert("El campo usuario es requerido."); /*Se mostrara en caso de no haber completado el campo*/
+            usuario.focus();
+            return false;
+        }
+        if (!expRegUsuario.exec(usuario.value)) {
+            alert("El campo usuario no tiene el formato correcto."); /*Se mostrara en caso de no  haber escrito con el formato correcto*/
+            usuario.focus();
+            return false;
+        }
+        if (clave.value === "") {
+            alert("El campo contraseña es requerido."); /*Se mostrara en caso de no haber completado el campo*/
+            clave.focus();
+            return false;
+        }
+        if (!expRegClave.exec(clave.value)) {
+            alert("El campo contraseña no tiene el formato correcto."); /*Se mostrara en caso de no  haber escrito con el formato correcto*/
+            clave.focus();
+            return false;
+        }
+         return true;
+        }
+        window.onload = function()
+        {
+          var formulario=document.getElementById("form-ingresar");  /*Función del Boton Enviar*/
+          formulario.onsubmit = validarForm;
+        }
+    </script>
+</html>
+
+	

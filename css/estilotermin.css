@@ -1,0 +1,60 @@
+body{
+	background-color: #CECCCF; /*Color de fondo*/
+}
+div {
+	background-color: #d3d3d3;  /*Color de fondo*/
+	 font: italic;   /*Tipo de letra*/
+	 color: white;    /*Color de letra*/
+	 text-align: center;    /*Posicion del texto*/
+	}
+	div div{
+		max-width:1100px; /*Establece el maximo de ancho*/
+		padding: 20x; /*El espacio entre su contenido y su borde*/
+		margin-left: auto; /*Margen izquierdo*/
+		margin-right: auto; /*Margen derecho*/
+	}
+	div div div{
+		float: left;  /*Posicion*/
+		width: 65%; /*Ancho*/
+	}
+	div div div div{
+		padding-top: 40px;  /*El espacio entre su contenido y su borde*/
+		 float: right; /*Posicion*/
+		 width: 30%; /*Establece el ancho*/
+		 text-align: right;   /*Posicion del texto*/
+	}
+h1 {
+	font: Calibri;    /*Tipo de letra*/
+	font-size: 40px;    /*Tamaño de letra*/
+	color:#333;      /*Color de letra*/
+	font-weight:600; /*Mostrar un texto en negrita*/
+	letter-spacing:  -3px;   /*Espacio entre una letra y otra*/
+	text-align: center;    /*Posicion del texto*/
+}
+h2 {
+	font: Calibri;   /*Tipo de letra*/
+	font-size: 32px;   /*Tamaño de letra*/
+	color:#444;        /*Color de letra*/
+	font-weight: 600;  /*Mostrar un texto en negrita*/
+	letter-spacing: -1px;    /*Espacio entre una letra y otra*/
+ 	text-align: left;     /*Posicion del texto*/
+}
+p {
+	font: calibri;   /*Tipo de letra*/
+	font-size: 18px;   /*Tamaño de letra*/
+	color: #000000;   /*Color de letra*/
+	text-align:left;   /*Posicion del texto*/
+}
+div footer p{
+	text-align: center;   /*Posicion del texto*/
+	color: white;   /*Color de letra*/
+}
+div footer p a{
+	color: yellow;   /*Color de letra*/
+}
+div .fot{
+	clear: both; /*Especifica si un elemento puede estar al lado de elementos flotantes que lo preceden o si debe ser movido*/
+	 background-color: #22A69C; /*Color de fondo*/
+	 min-height: 100px; /*Minimo de ancho*/
+	 padding: 8px; /*Ancho*/
+}
